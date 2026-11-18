@@ -1,0 +1,35 @@
+
+:root {
+  /* Main colour palette */
+  --primary: #4F4254;
+  --primary-dark: #382F3C;
+  --primary-light: #66586B;
+
+  --gold: #7C8463;
+  --gold-light: #A6AC8D;
+
+  --background: #D7C3B8;
+  --surface: #F1E5DE;
+  --surface-light: #E9DAD1;
+
+  --text-primary: #332A36;
+  --text-secondary: #6F626B;
+  --text-light: #FFFFFF;
+
+  --success: #627653;
+  --danger: #B65D5D;
+  --warning: #B28A50;
+
+  --border: #C5AEA5;
+  --shadow: 0 8px 30px rgba(79, 66, 84, 0.12);
+
+  --font-family: "Inter", Arial, sans-serif;
+  --container-width: 1200px;
+  --navbar-height: 76px;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --transition: 0.3s ease;
+}

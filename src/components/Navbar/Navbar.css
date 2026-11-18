@@ -1,0 +1,170 @@
+
+.navbar {
+  width: 100%;
+  height: 76px;
+  background: linear-gradient(
+    110deg,
+    #4F4254 0%,
+    #D7C3B8 52%,
+    #7C8463 100%
+  );
+  border-bottom: 2px solid #7C8463;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: min(100% - 48px, 1200px);
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #D7C3B8;
+}
+
+
+.brand-mark {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  border: 1.5px solid #7C8463;
+  border-radius: 50%;
+  color: #D7C3B8;
+  font-family: "Bodoni MT", "Didot", "Times New Roman", serif;
+  font-size: 39px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    145deg,
+    #4F4254,
+    #7C8463,
+    #4F4254
+  );
+  box-shadow: 0 3px 12px rgba(79, 66, 84, 0.3);
+}
+
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid #D7C3B8;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: hsl(282, 100%, 93%);
+}
+
+.brand-tagline {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: hsl(283, 78%, 75%);
+  margin-top: 3px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-links a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #4F4254;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: #FFFFFF;
+}
+
+.admin-nav-link {
+  background: #7C8463;
+  padding: 9px 16px;
+  border-radius: 6px;
+  color: #FFFFFF !important;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #4F4254;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    width: calc(100% - 32px);
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+    background: linear-gradient(
+      135deg,
+      lab(82.42% 14.5 -13.75),
+      #D7C3B8,
+      #7C8463
+    );
+    border-top: 1px solid #7C8463;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .navbar-links a {
+    color: #4F4254;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 22px;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+}

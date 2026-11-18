@@ -1,0 +1,131 @@
+
+.admin-sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 30px 18px;
+  background-color: #4F4254;
+  color: #F1E5DE;
+}
+
+.admin-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 10px 30px;
+  border-bottom: 1px solid rgba(241, 229, 222, 0.2);
+}
+
+.admin-sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #D7C3B8;
+  border-radius: 50%;
+  color: #F1E5DE;
+  font-family: Georgia, serif;
+  font-size: 27px;
+}
+
+.admin-sidebar-brand h2 {
+  color: #F1E5DE;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.admin-sidebar-brand p {
+  margin-top: 4px;
+  color: #D7C3B8;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.admin-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 30px;
+}
+
+.admin-sidebar-label {
+  padding: 0 12px;
+  margin-bottom: 10px;
+  color: #D7C3B8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.admin-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px 13px;
+  border-radius: 8px;
+  color: #E9DAD1;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.admin-sidebar-link:hover,
+.admin-sidebar-link.active {
+  background-color: #7C8463;
+  color: #FFFFFF;
+}
+
+.admin-sidebar-footer {
+  margin-top: auto;
+  padding-top: 30px;
+}
+
+.admin-sidebar-back {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border-top: 1px solid rgba(241, 229, 222, 0.2);
+  color: #D7C3B8;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.admin-sidebar-back:hover {
+  color: #FFFFFF;
+}
+
+@media (max-width: 800px) {
+  .admin-sidebar {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .admin-sidebar-brand {
+    padding-bottom: 18px;
+  }
+
+  .admin-sidebar-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 18px;
+  }
+
+  .admin-sidebar-label {
+    width: 100%;
+  }
+
+  .admin-sidebar-link {
+    flex: 1;
+    justify-content: center;
+    min-width: 130px;
+  }
+
+  .admin-sidebar-footer {
+    margin-top: 15px;
+    padding-top: 10px;
+  }
+}

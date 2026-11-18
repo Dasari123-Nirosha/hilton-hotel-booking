@@ -1,0 +1,101 @@
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+  padding: 70px 6%;
+  background-color: #F1E5DE;
+}
+
+.about-content > p {
+  color: #7C8463;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-content > h2 {
+  color: #4F4254;
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+.about-content > span {
+  color: #6F626B;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* WHY CHOOSE HILTON */
+
+.why-hilton {
+  margin-top: 35px;
+}
+
+.why-hilton h2 {
+  color: #4F4254;
+  font-size: 25px;
+  margin-bottom: 22px;
+}
+
+.why-hilton-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.why-hilton-item {
+  padding: 18px;
+  background-color: #D7C3B8;
+  border-radius: 10px;
+}
+
+.why-hilton-icon {
+  color: #7C8463;
+  margin-bottom: 10px;
+}
+
+.why-hilton-item h3 {
+  color: #4F4254;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.why-hilton-item p {
+  color: #6F626B;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 45px 20px;
+  }
+
+  .about-content > h2 {
+    font-size: 26px;
+  }
+
+  .why-hilton h2 {
+    font-size: 22px;
+  }
+
+  .about-image img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 400px) {
+  .why-hilton-grid {
+    grid-template-columns: 1fr;
+  }
+}

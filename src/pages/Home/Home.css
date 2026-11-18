@@ -1,0 +1,97 @@
+
+.featured-rooms-section {
+  padding: 60px 6%;
+  background-color: #D7C3B8;
+}
+
+.featured-rooms-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.featured-rooms-heading p {
+  color: #7C8463;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.featured-rooms-heading h2 {
+  color: #4F4254;
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.featured-rooms-heading span {
+  color: #4F4254;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.featured-rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Popular Destinations */
+
+.destinations-section {
+  padding: 65px 6%;
+  background-color: #F1E5DE;
+}
+
+.destinations-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 38px;
+}
+
+.destinations-heading p {
+  color: #7C8463;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.destinations-heading h2 {
+  color: #4F4254;
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.destinations-heading span {
+  color: #6F626B;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+@media (max-width: 900px) {
+  .featured-rooms-grid,
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-rooms-grid,
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-rooms-heading h2,
+  .destinations-heading h2 {
+    font-size: 26px;
+  }
+
+  .featured-rooms-section,
+  .destinations-section {
+    padding: 45px 5%;
+  }
+}

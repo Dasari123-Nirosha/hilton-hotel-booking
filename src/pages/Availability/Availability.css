@@ -1,0 +1,158 @@
+
+/* Availability Section */
+
+.rooms-availability-section {
+  position: relative;
+  z-index: 2;
+  width: min(1100px, calc(100% - 40px));
+  margin: 35px auto 55px;
+  padding: 30px;
+  border: 1px solid #D7C3B8;
+  border-radius: 12px;
+  background: #FFFFFF;
+  box-shadow: 0 12px 35px rgba(79, 66, 84, 0.12);
+}
+
+.rooms-availability-heading {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.rooms-availability-heading p {
+  margin-bottom: 10px;
+  color: #7C8463;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.rooms-availability-heading h2 {
+  margin-bottom: 10px;
+  color: #4F4254;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.rooms-availability-heading span {
+  color: #6F626B;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Availability Form */
+
+.rooms-availability-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr auto;
+  align-items: end;
+  gap: 18px;
+}
+
+.rooms-availability-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.rooms-availability-field label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4F4254;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.rooms-availability-field label svg {
+  color: #7C8463;
+  flex-shrink: 0;
+}
+
+.rooms-availability-field input,
+.rooms-availability-field select {
+  width: 100%;
+  min-width: 0;
+  min-height: 47px;
+  padding: 10px 12px;
+  border: 1px solid #D7C3B8;
+  border-radius: 7px;
+  outline: none;
+  background: #FDFBFA;
+  color: #4F4254;
+  font-size: 13px;
+}
+
+.rooms-availability-field input:focus,
+.rooms-availability-field select:focus {
+  border-color: #7C8463;
+  box-shadow: 0 0 0 3px rgba(124, 132, 99, 0.12);
+}
+
+.rooms-availability-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 47px;
+  padding: 12px 19px;
+  border: none;
+  border-radius: 7px;
+  background: #4F4254;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.rooms-availability-button:hover {
+  background: #7C8463;
+  transform: translateY(-2px);
+}
+
+.rooms-availability-error {
+  margin-top: 15px;
+  padding: 12px 15px;
+  border-radius: 7px;
+  background: #F5E2DF;
+  color: #A34F4F;
+  font-size: 13px;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .rooms-availability-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .rooms-availability-section {
+    width: calc(100% - 28px);
+    margin: 25px auto 40px;
+    padding: 20px;
+  }
+
+  .rooms-availability-heading h2 {
+    font-size: 25px;
+  }
+
+  .rooms-availability-heading span {
+    font-size: 13px;
+  }
+
+  .rooms-availability-form {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .rooms-availability-button {
+    width: 100%;
+  }
+}

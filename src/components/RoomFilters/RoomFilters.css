@@ -1,0 +1,66 @@
+.room-filters {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 22px 25px;
+  margin-bottom: 30px;
+  background-color: #F1E5DE;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(79, 66, 84, 0.08);
+}
+
+.room-filters-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: auto;
+  color: #4F4254;
+}
+
+.room-filters-heading h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.room-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.room-filter-group label {
+  color: #4F4254;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.room-filter-group select {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #C5AEA5;
+  border-radius: 7px;
+  background-color: #FFFFFF;
+  color: #4F4254;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.room-filter-group select:focus {
+  border-color: #7C8463;
+}
+
+@media (max-width: 600px) {
+  .room-filters {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 18px;
+    gap: 16px;
+  }
+
+  .room-filter-group {
+    width: 100%;
+  }
+}

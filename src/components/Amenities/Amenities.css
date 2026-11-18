@@ -1,0 +1,73 @@
+
+.amenities-section {
+  padding: 65px 6%;
+  background-color: #F1E5DE;
+}
+
+.amenities-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.amenities-heading p {
+  color: #7C8463;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.amenities-heading h2 {
+  color: #4F4254;
+  font-size: 32px;
+  margin-top: 12px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.amenity-card {
+  padding: 28px 20px;
+  text-align: center;
+  background-color: #D7C3B8;
+  border-radius: 12px;
+}
+
+.amenity-icon {
+  color: #7C8463;
+  margin-bottom: 15px;
+}
+
+.amenity-card h3 {
+  color: #4F4254;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.amenity-card p {
+  color: #6F626B;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .amenities-section {
+    padding: 45px 20px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amenities-heading h2 {
+    font-size: 26px;
+  }
+}

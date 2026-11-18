@@ -1,0 +1,172 @@
+
+.room-form-card {
+  padding: 28px;
+  border: 1px solid #D7C3B8;
+  border-radius: 12px;
+  background: #FFFFFF;
+  box-shadow: 0 5px 20px rgba(79, 66, 84, 0.06);
+}
+
+.room-form-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #E9DAD1;
+}
+
+.room-form-heading p {
+  margin-bottom: 7px;
+  color: #7C8463;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.room-form-heading h2 {
+  color: #4F4254;
+  font-family: Georgia, serif;
+  font-size: 23px;
+}
+
+.room-form-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 7px;
+  background: #F1E5DE;
+  color: #4F4254;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.room-form-close:hover {
+  background: #D7C3B8;
+}
+
+.room-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.room-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.room-form-full {
+  grid-column: 1 / -1;
+}
+
+.room-form-field label {
+  color: #4F4254;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.room-form-field input,
+.room-form-field select,
+.room-form-field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #D7C3B8;
+  border-radius: 7px;
+  outline: none;
+  background: #FFFCFA;
+  color: #4F4254;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.room-form-field input:focus,
+.room-form-field select:focus,
+.room-form-field textarea:focus {
+  border-color: #7C8463;
+  box-shadow: 0 0 0 3px rgba(124, 132, 99, 0.12);
+}
+
+.room-form-field input::placeholder,
+.room-form-field textarea::placeholder {
+  color: #A99BA3;
+}
+
+.room-form-field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.room-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #E9DAD1;
+}
+
+.room-form-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.room-form-cancel {
+  background: #F1E5DE;
+  color: #4F4254;
+}
+
+.room-form-cancel:hover {
+  background: #D7C3B8;
+}
+
+.room-form-save {
+  background: #4F4254;
+  color: #FFFFFF;
+}
+
+.room-form-save:hover {
+  background: #7C8463;
+}
+
+@media (max-width: 600px) {
+  .room-form-card {
+    padding: 18px;
+  }
+
+  .room-form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .room-form-full {
+    grid-column: auto;
+  }
+
+  .room-form-heading h2 {
+    font-size: 20px;
+  }
+
+  .room-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .room-form-actions button {
+    width: 100%;
+  }
+}

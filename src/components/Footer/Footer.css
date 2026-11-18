@@ -1,0 +1,118 @@
+
+.footer {
+  background-color: #4F4254;
+  color: #F1E5DE;
+  padding: 45px 6% 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+  gap: 35px;
+  padding-bottom: 40px;
+}
+
+/* HILTON ABOUT SECTION */
+.footer-about {
+  background-color: #D7C3B8;
+  color: #4F4254;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.footer-about h2 {
+  font-size: 28px;
+  letter-spacing: 3px;
+  margin-bottom: 3px;
+}
+
+.footer-about span {
+  color: #7C8463;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.footer-about p {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #4F4254;
+}
+
+/* FOOTER HEADINGS */
+.footer h3 {
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: #D7C3B8;
+}
+
+/* QUICK LINKS */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links a {
+  color: #F1E5DE;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.footer-links a:hover {
+  color: #A6AC8D;
+}
+
+/* CONTACT */
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #F1E5DE;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer-contact svg {
+  color: #A6AC8D;
+}
+
+/* COPYRIGHT STRIP */
+.footer-bottom {
+  background-color: #7C8463;
+  margin: 0 -7.1%;
+  text-align: center;
+  padding: 18px 10px;
+}
+
+.footer-bottom p {
+  color: hsl(0, 66%, 85%);
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .footer {
+    padding: 35px 20px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-bottom {
+    margin: 0 -20px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+}
