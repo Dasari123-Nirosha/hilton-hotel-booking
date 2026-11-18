@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   UserRound,
   Mail,
@@ -9,10 +9,19 @@ import {
   Pencil,
   Save,
 } from "lucide-react";
+
 import {
   getStorageData,
   saveStorageData,
 } from "../../utils/localStorage";
+
+import {
+  doc,
+  onSnapshot,
+  setDoc,
+} from "firebase/firestore";
+
+import { db } from "../../firebase";
 import "./Profile.css";
 
 const defaultProfile = {
@@ -22,12 +31,43 @@ const defaultProfile = {
   address: "",
 };
 
+const profileRef = doc(db, "sharedData", "profile");
+
 function Profile() {
   const [isEditing, setIsEditing] = useState(false);
 
   const [profile, setProfile] = useState(() =>
     getStorageData("hilton-profile", defaultProfile)
   );
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(
+      profileRef,
+      async (snapshot) => {
+        try {
+          if (snapshot.exists()) {
+            const cloudProfile = snapshot.data().details;
+            setProfile(cloudProfile);
+            saveStorageData("hilton-profile", cloudProfile);
+          } else {
+            const localProfile = getStorageData(
+              "hilton-profile",
+              defaultProfile
+            );
+
+            await setDoc(profileRef, { details: localProfile });
+          }
+        } catch (error) {
+          console.error("Firebase profile error:", error);
+        }
+      },
+      (error) => {
+        console.error("Could not load shared profile:", error);
+      }
+    );
+
+    return () => unsubscribe();
+  }, []);
 
   const handleChange = (e) => {
     setProfile((previous) => ({
@@ -36,11 +76,18 @@ function Profile() {
     }));
   };
 
-  const handleSave = (e) => {
+  const handleSave = async (e) => {
     e.preventDefault();
 
-    saveStorageData("hilton-profile", profile);
-    setIsEditing(false);
+    try {
+      await setDoc(profileRef, { details: profile });
+      saveStorageData("hilton-profile", profile);
+      setIsEditing(false);
+      alert("Profile saved successfully!");
+    } catch (error) {
+      console.error("Profile save error:", error);
+      alert("Could not save profile. Please try again.");
+    }
   };
 
   const handleCancel = () => {
