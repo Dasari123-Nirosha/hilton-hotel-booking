@@ -246,7 +246,7 @@ const rooms = [
   category: "Luxury Kutir",
   name: "Wooden Cottage Suite",
   description: "Discover warm wooden interiors combined with modern comfort and relaxing views.",
-  image: "https://www.orchidhotel.com/static/website/img/hotels/panchgani/rooms_innerpage/panchgani-wooden-cottage-suite-exterior-porch-tropical-garden-orchid-hotel.webp",
+ image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=800&q=80",
   price: 9000,
   guests: 3,
   bed: "Queen Bed",
